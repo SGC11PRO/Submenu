@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h1>Servicio 3</h1>
             <p>Este es el contenido del Servicio 3.</p>
         `,
-        acercaDe: `
+        acercade: `
             <h1>Acerca de Nosotros</h1>
             <p>Información sobre nuestra empresa y nuestro equipo.</p>
         `,
