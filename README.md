@@ -131,5 +131,5 @@ Para apoyar este repositorio puedes contribuir de las siguientes formas
 - Envía los cambios a tu fork
 - Realiza un pull-request en el repositorio original
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+## Contacto
+- `https://github.com/SGC11PRO`
