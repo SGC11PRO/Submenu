@@ -4,6 +4,10 @@ Este proyecto es una plantilla de un menú lateral con submenús, adaptable para
 La plantilla está desarrollada en dos versiones: una utilizando HTML, CSS y JavaScript puro, y otra utilizando React. 
 Ambas versiones están diseñadas para ser fáciles de integrar y personalizar en tus propios proyectos.
 
+**Visita el proyecto desde :**
+- http://sergiog-sidemenu.netlify.app : Version HTML, CSS y JavaScript
+- Proximamente... : Versión React
+
 ---
 
 ## Tabla de Contenidos
