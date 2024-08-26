@@ -28,7 +28,7 @@ Ambas versiones están diseñadas para ser fáciles de integrar y personalizar e
 
 ## Vista Previa
 
-> Agrega aquí una imagen o GIF de demostración del menú lateral en acción.
+![Captura de Pantalla](Muestra.png)
 
 ---
 
