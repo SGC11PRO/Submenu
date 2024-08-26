@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Cabeceras : No cambiar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral con Submenús</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/xml+svg" href="./public/favicon.svg" /> <!-- Icono de la pestaña -->
+</head>
+
+<body>
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Título</h2> <!-- Título del menú -->
+        </div>
+
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#" data-content="inicio">Inicio</a> <!-- Menu 1 -->
+
+                <ul class="submenu">
+                    <li><a href="#" data-content="proyecto1">Proyecto 1</a></li> <!-- Submenu 1 -->
+                    <li><a href="#" data-content="proyecto2">Proyecto 2</a></li> <!-- Submenu 2 -->
+                    <li><a href="#" data-content="proyecto3">Proyecto 3</a></li> <!-- Submenu 3 -->
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#" data-content="servicios">Servicios</a> <!-- Menu 2 -->
+
+                <ul class="submenu">
+                    <li><a href="#" data-content="servicio1">Servicio 1</a></li> <!-- Submenu 1 -->
+                    <li><a href="#" data-content="servicio2">Servicio 2</a></li> <!-- Submenu 2 -->
+                    <li><a href="#" data-content="servicio3">Servicio 3</a></li> <!-- Submenu 3 -->
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#" data-content="acerca-de">Acerca de</a> <!-- Menu 3 -->
+            </li>
+
+            <li class="menu-item">
+                <a href="#" data-content="contacto">Contacto</a> <!-- Menu 4 -->
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal : Aqui se renderiza el contenido dinámicamente gracias a la id: content -->
+    <main class="main-content" id="content">
+        <!-- No colocar nada. Todo el contenido se renderiza dinamicamente desde el script.js -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

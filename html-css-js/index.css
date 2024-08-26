@@ -1,0 +1,110 @@
+/** Estilos CSS */
+
+/** Tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /** Colores */
+    --main-color: #FF8811;
+    --dark-color: #090809;
+    --ligth-color: #F1E4E8;
+    --alt-color: #00A6A6;
+    --extra-color: #776472;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toda la página */
+body {
+    font-family: 'Inter';
+    display: flex;
+    height: 100vh;
+    background-color: var(--ligth-color);
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-color);
+    color: var(--ligth-color);
+    height: 100%;
+    padding: 30px;
+}
+
+/* Titulo */
+.sidebar-header {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+/* Todo el menu */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Texto del menu */
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+
+    display: block;
+    padding: 10px;
+
+    background-color: var(--dark-color);
+    border: 3px solid var(--main-color);
+
+    transition: background-color 0.3s;
+
+    font-weight: 600;
+}
+
+/* Texto del menu cuando se pasa el cursor por encima */
+.menu-item a:hover {
+    background-color: var(--main-color);
+    border-color: var(--ligth-color);
+
+    color: var(--dark-color);
+}
+
+/* Estilos del submenú */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5em; /* Margen con el menu */
+
+    margin-left: 20px; /* Desplazamiento hacia la izq del submenu respecto a su menu*/
+    display: none;
+}
+
+/* Cada submenu */
+.submenu li {
+    margin-bottom: 0.5em; /* Margen entre submenus */
+}
+
+/* Texto del submenu */
+.submenu a {
+    background-color: var(--dark-color);
+    border: 3px solid var(--ligth-color);
+}
+
+/* Texto del submenu cuando se pasa el cursor por encima */
+.submenu a:hover {
+    background-color: var(--extra-color);
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    padding: 20px;
+
+    /* Agrega mas estilos conforme añadas contenido al main. Si necesitas ayuda, dirigete al repo de github */
+}
