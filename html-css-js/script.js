@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.menu-item');
     const content = document.getElementById('content'); // Contenedor de contenido principal
 
-    // Contenidos a cargar dinámicamente -> HTML incrustado // Array --> CAMBIAR ESTO ----------------------------------------------------------
+    // Contenidos a cargar dinámicamente -> HTML incrustado
     const contents = {
         inicio: `
             <h1>Página de Inicio</h1>
@@ -46,16 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
             <h1>Contacto</h1>
             <p>Ponte en contacto con nosotros a través de esta sección.</p>
         `
-    }; // HASTA AQUI --------------------------------------------------------------------------------------------------------------------
+    };
 
-    // Funcionalidad para mostrar/ocultar submenús
+    // Funcionalidad para mostrar/ocultar submenús y cambiar el estado activo
     menuItems.forEach(function(item) {
         item.addEventListener('click', function() {
-            const submenu = item.querySelector('.submenu');
 
-            if (submenu) {
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            }
+            // Alternar la clase 'active' en el elemento clicado -> Despliega el menu
+            item.classList.toggle('active');
+
+            // Ocultar otros submenús y eliminar la clase 'active' de otros elementos del menú -> Para solo tener un menu desplegado a la vez
+            menuItems.forEach(function(i) {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
         });
     });
 
@@ -64,13 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuLinks.forEach(function(link) {
         link.addEventListener('click', function(event) {
-
             event.preventDefault(); // Evita el comportamiento por defecto del enlace
 
             const contentKey = link.getAttribute('data-content'); // Obtiene el valor de data-content
 
             if (contents[contentKey]) {
-                content.innerHTML = contents[contentKey]; // Cambia el contenido y carga aquel con la misma id que el boton
+                content.innerHTML = contents[contentKey]; // Cambia el contenido y carga aquel con la misma id que el botón
             }
         });
     });

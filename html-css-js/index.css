@@ -10,7 +10,6 @@
     --ligth-color: #F1E4E8;
     --alt-color: #00A6A6;
     --extra-color: #776472;
-
 }
 
 * {
@@ -56,15 +55,11 @@ body {
 .menu-item a {
     color: #fff;
     text-decoration: none;
-
     display: block;
     padding: 10px;
-
     background-color: var(--dark-color);
     border: 3px solid var(--main-color);
-
     transition: background-color 0.3s;
-
     font-weight: 600;
 }
 
@@ -72,7 +67,6 @@ body {
 .menu-item a:hover {
     background-color: var(--main-color);
     border-color: var(--ligth-color);
-
     color: var(--dark-color);
 }
 
@@ -81,9 +75,10 @@ body {
     list-style: none;
     padding: 0;
     margin-top: 0.5em; /* Margen con el menu */
-
-    margin-left: 20px; /* Desplazamiento hacia la izq del submenu respecto a su menu*/
-    display: none;
+    margin-left: 20px; /* Desplazamiento hacia la izq del submenu respecto a su menu */
+    max-height: 0; /* Oculta el submenu inicialmente */
+    overflow: hidden; /* Esconde el contenido que exceda max-height */
+    transition: max-height 0.5s ease-out; /* Animación para el despliegue */
 }
 
 /* Cada submenu */
@@ -95,6 +90,9 @@ body {
 .submenu a {
     background-color: var(--dark-color);
     border: 3px solid var(--ligth-color);
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
 /* Texto del submenu cuando se pasa el cursor por encima */
@@ -102,9 +100,13 @@ body {
     background-color: var(--extra-color);
 }
 
+/* Mostrar el submenu cuando el menú item está activo */
+.menu-item.active .submenu {
+    max-height: 300px; /* Ajusta este valor según el tamaño de tu submenú */
+}
+
 /* Estilos del contenido principal */
 .main-content {
     padding: 20px;
-
     /* Agrega mas estilos conforme añadas contenido al main. Si necesitas ayuda, dirigete al repo de github */
 }
